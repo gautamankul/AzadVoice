@@ -1,0 +1,36 @@
+1. Go to workspaces directory:
+   cd workspaces
+
+2. Create a Flutter folder:
+   mkdir flutter && cd flutter
+
+3. Clone Flutter from GitHub:
+   git clone https://github.com/flutter/flutter.git
+
+4. Edit .bashrc or .profile to add Flutter to PATH:
+   nano ~/.bashrc   # or  nano ~/.profile
+   
+   Add:
+   export PATH="$PATH:/workspaces/flutter/flutter/bin"
+
+5. If using Zsh, also update .zshrc:
+   nano ~/.zshrc
+   
+   Add:
+   export PATH="$PATH:[PATH_TO_FLUTTER_DIRECTORY]/bin"
+   export PATH="$PATH:/workspaces/flutter/flutter/bin"
+
+6. Reload the shell configuration:
+   source ~/.bashrc    # or  source ~/.profile  or  source ~/.zshrc
+
+7. Check Flutter installation:
+   flutter doctor
+
+8. (Optional) Get dependencies:
+   flutter pub get
+
+9. Upgrade Flutter:
+   flutter upgrade
+
+10. Run Flutter web server:
+    flutter run -d web-server --web-hostname=0.0.0.0 --web-port 3000
